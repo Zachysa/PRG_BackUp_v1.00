@@ -16,6 +16,7 @@ namespace PRG_BackUp_v1._0.Models
         public int FileCountFailed { get; set; }
         public string Errors { get; set; }
         public int IdPcBackUp { get; set; }
+        public string Operations { get; set; }
         /*
         [ForeignKey("IdPcBackUp")]
         public virtual PcBackUp _IdPcBackUp { get; set; }
