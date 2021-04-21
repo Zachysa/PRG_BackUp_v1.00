@@ -19,12 +19,12 @@ namespace PRG_BackUp_v1._0.Models
 
         public Token Authenticate(string username, string password)
         {
-            User login = this.LoginRepository.FindByUsername(username);
+            User login = this.LoginRepository.FindByUsername(username.Trim('\"'));
 
             if (login == null)
                 throw new ArgumentException("Invalid username");
 
-            if (login.Password != password)
+            if (login.Password != password.Trim('\"'))
                 throw new ArgumentException("Invalid password");
 
             Token token = this.CreateToken(username);
