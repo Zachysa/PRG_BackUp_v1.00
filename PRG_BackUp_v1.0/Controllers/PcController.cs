@@ -1,17 +1,13 @@
-﻿using JWT.Algorithms;
-using JWT.Builder;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using PRG_BackUp_v1._0.Models;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace PRG_BackUp_v1._0.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    
-   
-  
+    [Auth]
+
     public class PcController : ControllerBase
     {
         private PcRepositary repositary = new PcRepositary();
@@ -19,7 +15,7 @@ namespace PRG_BackUp_v1._0.Controllers
         [HttpGet]
         public List<Pc> WritteAll()
         {
-            
+
             return this.repositary.WritteAll();
         }
 

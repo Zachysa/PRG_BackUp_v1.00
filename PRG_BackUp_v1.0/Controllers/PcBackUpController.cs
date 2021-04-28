@@ -1,17 +1,14 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using PRG_BackUp_v1._0.DatabaseRepository;
 using PRG_BackUp_v1._0.Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace PRG_BackUp_v1._0.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    
+    [Auth]
+
     public class PcBackUpController : ControllerBase
     {
         private PcBackUpRepository repository = new PcBackUpRepository();
@@ -26,6 +23,12 @@ namespace PRG_BackUp_v1._0.Controllers
         public List<PcBackUp> GetByPc(int id)
         {
             return this.repository.FindByPc(id);
+        }
+
+        [HttpGet("idPcAndConfig")]
+        public PcBackUp GetByPcAndConfig(int idPc, int idConfig)
+        {
+            return this.repository.FindByPcAndConfig(idPc, idConfig);
         }
 
         [HttpGet("{id}")]

@@ -1,9 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PRG_BackUp_v1._0.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace PRG_BackUp_v1._0
 {
@@ -14,10 +10,9 @@ namespace PRG_BackUp_v1._0
         public DbSet<File> tbFile { get; set; }
         public DbSet<Pc> tbPc { get; set; }
         public DbSet<PcBackUp> tbBackupPc { get; set; }
-
         public DbSet<Storage> tbStorage { get; set; }
         public DbSet<Time> tbTime { get; set; }
-        public DbSet<User> tbUser{ get; set; }
+        public DbSet<User> tbUser { get; set; }
         public DbSet<Token> tbtoken { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -25,7 +20,5 @@ namespace PRG_BackUp_v1._0
             optionsBuilder.UseMySQL("server=ftp.pilnyjakub.eu;database=zacharfilip;user=zacharfilip;password=123456");
             optionsBuilder.UseLazyLoadingProxies();
         }
-
     }
-
 }

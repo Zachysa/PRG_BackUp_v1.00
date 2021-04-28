@@ -1,14 +1,12 @@
 ﻿using PRG_BackUp_v1._0.Models;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace PRG_BackUp_v1._0
 {
     public class PcRepositary
     {
-       private MyContext db = new MyContext();
+        private MyContext db = new MyContext();
 
         public List<Pc> WritteAll()
         {

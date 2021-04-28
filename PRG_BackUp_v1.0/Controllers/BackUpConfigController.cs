@@ -1,17 +1,14 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using PRG_BackUp_v1._0.DatabaseRepository;
 using PRG_BackUp_v1._0.Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace PRG_BackUp_v1._0.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    
+    [Auth]
+
     public class BackUpConfigController : ControllerBase
     {
         private BackUpConfigRepositary repository = new BackUpConfigRepositary();

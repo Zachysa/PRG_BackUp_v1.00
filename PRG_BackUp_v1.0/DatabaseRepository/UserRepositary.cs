@@ -1,8 +1,6 @@
 ﻿using PRG_BackUp_v1._0.Models;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace PRG_BackUp_v1._0.DatabaseRepository
 {
@@ -19,10 +17,11 @@ namespace PRG_BackUp_v1._0.DatabaseRepository
         {
             return this.db.tbUser.Find(id);
         }
+
         public User FindByUsername(string username)
         {
             return this.db.tbUser.Where(x => x.Username == username).FirstOrDefault();
-            
+
         }
 
         public User Add(User user)
