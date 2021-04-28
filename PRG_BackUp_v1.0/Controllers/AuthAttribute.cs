@@ -1,13 +1,9 @@
-﻿using JWT.Algorithms;
-using JWT.Builder;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using PRG_BackUp_v1._0.Models;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace PRG_BackUp_v1._0.Controllers
 {

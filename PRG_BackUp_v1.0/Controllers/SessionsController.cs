@@ -1,14 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PRG_BackUp_v1._0.Models;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace PRG_BackUp_v1._0.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+
     public class SessionsController : Controller
     {
         public Authenticator Authenticator { get; set; } = new Authenticator();

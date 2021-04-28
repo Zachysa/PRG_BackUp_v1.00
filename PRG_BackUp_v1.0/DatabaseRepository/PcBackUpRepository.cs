@@ -1,8 +1,6 @@
 ﻿using PRG_BackUp_v1._0.Models;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace PRG_BackUp_v1._0.DatabaseRepository
 {
@@ -18,6 +16,11 @@ namespace PRG_BackUp_v1._0.DatabaseRepository
         public List<PcBackUp> FindByPc(int id)
         {
             return this.db.tbBackupPc.Where(x => x.IdPc == id).ToList();
+        }
+
+        public PcBackUp FindByPcAndConfig(int idPc, int idConfig)
+        {
+            return this.db.tbBackupPc.Where(x => x.IdPc == idPc).Where(y => y.IdConfig == idConfig).FirstOrDefault();
         }
 
         public PcBackUp FindById(int id)
