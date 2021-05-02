@@ -8,6 +8,7 @@ namespace PRG_BackUp_v1._0.Models
         public int Id { get; set; }
         public int IdConfig { get; set; }
         public string Place { get; set; }
+        public string Format { get; set; }
         public string ServerIP { get; set; }
         public string ServerLogin { get; set; }
         public string ServerPass { get; set; }
