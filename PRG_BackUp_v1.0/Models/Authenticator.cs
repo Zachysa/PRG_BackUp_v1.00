@@ -45,13 +45,13 @@ namespace PRG_BackUp_v1._0.Models
 
         public void ValidateToken(string token)
         {
-            /*
+            
             JwtBuilder.Create()
                     .WithAlgorithm(new HMACSHA256Algorithm()) // symmetric
                     .WithSecret(Authenticator.SECRECT)
                     .MustVerifySignature()
                     .Decode(token);
-            */
+            
 
             Token item = this.TokensRepository.FindByValue(token);
 
