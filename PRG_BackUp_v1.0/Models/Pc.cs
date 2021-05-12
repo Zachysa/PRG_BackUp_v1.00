@@ -10,6 +10,7 @@ namespace PRG_BackUp_v1._0.Models
         public string IpAddress { get; set; }
         public string MacAddress { get; set; }
         public string OS { get; set; }
-        public string State { get; set; }
+        public string LastOnline { get; set; }
+        public int Blocked { get; set; }
     }
 }
